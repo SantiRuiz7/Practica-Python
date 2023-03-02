@@ -2,7 +2,7 @@
 
 numberOne = 5
 numberTwo = 1
-#numberTwo = "1"
+numberTwo = "1"
 
 #try except
 
@@ -35,3 +35,23 @@ else: #Opcional
 finally: #Opcional
     #Se ejecuta siempre
     print("La ejecución continúa")
+
+#Excepciones por tipo
+
+try:
+    print(numberOne + numberTwo)
+    print("No se ha producido error")
+except ValueError:
+    print("Se ha producido un error")
+except TypeError:
+    print("Se ha producido un error")
+
+# Captura de la información de la excepción
+
+try:
+    print(numberOne + numberTwo)
+    print("No se ha producido un error")
+except ValueError as error:
+    print(error)
+except Exception as my_random_error_name:
+    print(my_random_error_name)
